@@ -1,6 +1,10 @@
 {
   "db": {
+    "port": 27017,
+    "database": "clean_water",
+    "username": "",
+    "password": "",
     "name": "db",
-    "connector": "memory"
+    "connector": "mongodb"
   }
 }
