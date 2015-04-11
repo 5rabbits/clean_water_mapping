@@ -29,5 +29,9 @@
   "Sources": {
     "dataSource": "db",
     "public": true
+  },
+  "Threats": {
+    "dataSource": "db",
+    "public": true
   }
 }
