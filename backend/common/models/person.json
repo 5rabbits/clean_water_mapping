@@ -1,0 +1,14 @@
+{
+  "name": "Person",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "isTechnician": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

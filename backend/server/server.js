@@ -1,5 +1,6 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var path = require('path');
 
 var app = module.exports = loopback();
 
@@ -10,6 +11,10 @@ app.start = function() {
     console.log('Web server listening at: %s', app.get('url'));
   });
 };
+
+app.set('view engine', 'ejs'); // LoopBack comes with EJS out-of-box
+
+app.set('views', path.resolve(__dirname, 'views'));
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
