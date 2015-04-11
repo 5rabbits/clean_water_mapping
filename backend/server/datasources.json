@@ -1,10 +1,10 @@
 {
   "db": {
-    "name": "db",
-    "connector": "mongodb",
+    "port": 27017,
     "database": "clean_water",
     "username": "",
     "password": "",
-    "port": 27017
+    "name": "db",
+    "connector": "mongodb"
   }
 }
