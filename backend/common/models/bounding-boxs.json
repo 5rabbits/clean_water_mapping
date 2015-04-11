@@ -17,7 +17,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "childs": {
+      "type": "hasMany",
+      "model": "BoundingBoxs",
+      "foreignKey": "parent_id"
+    },
+    "parent": {
+      "type": "belongsTo",
+      "model": "BoundingBoxs",
+      "foreignKey": "parent_id"
+    }
+  },
   "acls": [],
   "methods": []
 }
