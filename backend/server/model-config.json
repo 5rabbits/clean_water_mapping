@@ -30,6 +30,10 @@
     "dataSource": "db",
     "public": true
   },
+  "Threats": {
+    "dataSource": "db",
+    "public": true
+  },
   "BoundingBoxs": {
     "dataSource": "db",
     "public": true
