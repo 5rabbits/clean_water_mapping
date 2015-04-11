@@ -1,0 +1,23 @@
+{
+  "name": "BoundingBoxs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "ne": {
+      "type": "geopoint",
+      "required": true
+    },
+    "sw": {
+      "type": "geopoint",
+      "required": true
+    },
+    "pop_density": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

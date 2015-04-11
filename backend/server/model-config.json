@@ -29,5 +29,9 @@
   "Sources": {
     "dataSource": "db",
     "public": true
+  },
+  "BoundingBoxs": {
+    "dataSource": "db",
+    "public": true
   }
 }
