@@ -13,3 +13,54 @@ You may want to crowd-source information about issues that affect access to the 
 The challenge is to improve mapping of drinking water resources. This could include development of a crowdsourcing app to monitor and map: potable water availability (well/stream/reservoir levels as measured by local people/ organizations), water quality, contaminants and ground water. This can help with identification of priority areas experiencing water stress (spatially and temporally) and contribute to improved access to drinking water. Along with available soil, weather and climate data, this could feed into early warning systems for regions that are under water stress.
 
 ## Analysis
+
+**Mapeo de Agua Potable**
+
+##Descripción General del proyecto
+La idea principal de esta aplicación es mapear georeferenciadamente las fuentes de agua potable disponibles en un lugar determinado con la idea de poder democratizar la información con respecto a la disponibilidad del agua potable y poder tomar decisiones a nivel de gobierno para poder mitigar posibles riesgos de distintas variables (contaminación, infraestructura, escaces, etc)
+
+Para poder determinar cada fuente de agua potable existen dos posibilidades, la carga automática mediante una fuente de datos disponible y la carga manual mediante usuarios.
+
+
+##Objetivos de la aplicación:
+
+* visualizar las fuentes de agua potable
+* señalar las fuentes de agua potable
+* calificar las fuentes de agua potable
+
+## Fuentes de Recolección de datos
+
+#### Información dura (datos estadisticos)
+
+*  Fuentes de agua potable
+*  Consumo esperado de agua percapita
+*  Densidad de población
+*  Accesibilidad
+
+## Modelamiento de datos
+
+* **Fuentes de agua potable:** cada fuente de agua tiene un radio de alcance
+* **Calificación Técnica:** determinar la potabilidad de esa fuente de agua potable
+* **Problemas de Accesibilidad:** todos los problemas que se puedan presentar en esa fuente de agua
+
+
+## Funcionalidades aplicación web
+
+* **Ingreso** (login-Signup)
+* **Dashboard:** Visualización de datos (fuentes de agua disponible)
+* **Fuente:** Determinar fuentes de agua potable georeferenciadas en un mapa
+* **Radio:** Alcance del agua potable en un radio determinado que viene definido por un ente específico / esta información se va cruzar con la densidad de población en ese punto específico
+* **Calificación Técnica:** Por personas calificadas en el tema
+* **Problemas:** Dificulatades que se puedan presentar con respecto a esa fuente específica de agua, por ejemplo, contaminación industrial/agricola, sequía, infraestructura.
+* **Call to Action:** 
+
+##Escalabilidad del proyecto
+
+Democratización de la información con respecto a la disponibilidad del agua potable.
+
+## Aspectos Técnicos
+
+* Frontend
+* Backend
+* UX/UI
+
