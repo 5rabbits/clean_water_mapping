@@ -1,0 +1,34 @@
+{
+  "name": "BoundingBoxs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "ne": {
+      "type": "geopoint",
+      "required": true
+    },
+    "sw": {
+      "type": "geopoint",
+      "required": true
+    },
+    "pop_density": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "childs": {
+      "type": "hasMany",
+      "model": "BoundingBoxs",
+      "foreignKey": "parent_id"
+    },
+    "parent": {
+      "type": "belongsTo",
+      "model": "BoundingBoxs",
+      "foreignKey": "parent_id"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
