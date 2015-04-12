@@ -1,19 +1,29 @@
 {
   "name": "BoundingBoxs",
+  "description": "A box of data, a square region on map",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
     "ne": {
       "type": "geopoint",
-      "required": true
+      "required": true,
+      "doc": "enter doc here please"
     },
     "sw": {
       "type": "geopoint",
-      "required": true
+      "required": true,
+      "doc": "enter doc here please"
     },
     "pop_density": {
       "type": "number",
-      "required": true
+      "required": true,
+      "doc": "density of people in the box"
+    },
+    "avg_water_consumption": {
+      "type": "number",
+      "required": true,
+      "default": 149,
+      "doc": "Average Consumption of water per capita (L/day), for now a constant, in the future may be calculated or updated, it depends of social concerns. http://www.ccwater.org.uk/savewaterandmoney/averagewateruse/"
     }
   },
   "validations": [],

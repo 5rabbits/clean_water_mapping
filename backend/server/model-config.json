@@ -41,5 +41,33 @@
   "Person": {
     "dataSource": "db",
     "public": true
+  },
+  "SourceType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SourceCategory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Measurement": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ParameterType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Parameter": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MeasurementData": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MeasureUnit": {
+    "dataSource": "db",
+    "public": true
   }
 }

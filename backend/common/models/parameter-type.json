@@ -1,0 +1,18 @@
+{
+  "name": "ParameterType",
+  "plural": "ParameterTypes",
+  "description": "Clasification of parameters",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "doc": "chemical, physical, organic"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,47 @@
+{
+  "name": "MeasurementData",
+  "description": "Samples of parameters in a measure",
+  "plural": "MeasurementData",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "sample": {
+      "type": "number",
+      "required": true,
+      "doc": "value of parameter"
+    },
+    "unit": {
+      "type": "string",
+      "required": true,
+      "doc": "unit of parameter in medition"
+    },
+    "exceeded": {
+      "type": "boolean",
+      "required": true,
+      "doc": "exceed limit of parameter (calculated)"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "parameter": {
+      "type": "belongsTo",
+      "model": "Parameter",
+      "foreignKey": "parameterId",
+      "doc": "Parameter that is being measured"
+    },
+    "measurement": {
+      "type": "belongsTo",
+      "model": "Measurement",
+      "foreignKey": "measurementId",
+      "doc": "measurement"
+    },
+    "unit": {
+      "type": "belongsTo",
+      "model": "MeasureUnit",
+      "foreignKey": "measureUnitId",
+      "doc": "measure unit"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

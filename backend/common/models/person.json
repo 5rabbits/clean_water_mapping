@@ -1,6 +1,7 @@
 {
   "name": "Person",
   "base": "User",
+  "description": "An user",
   "idInjection": true,
   "properties": {
     "isTechnician": {

@@ -1,19 +1,82 @@
 {
   "name": "Sources",
+  "description": "Represents a source of water",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "doc": "Name of source"
     },
     "location": {
       "type": "geopoint",
-      "required": true
+      "required": true,
+      "doc": "Position on World"
+    },
+    "official": {
+      "type": "boolean",
+      "required": true,
+      "doc": "Is an official source, certified by a tech person"
+    },
+    "quality": {
+      "type": "number",
+      "required": false,
+      "doc": "percentage (current, calculated with last measurement). May be prorated by Max of each parameter and their current sample."
+    },
+    "user_quality": {
+      "type": "number",
+      "required": false,
+      "doc": "First look of a Person (Discrete value): 1.Clear, 2.Fairly clear, 3.dark. May be it value should change with a mapreduce of user qualifications"
+    },
+    "water_supply": {
+      "type": "number",
+      "required": false,
+      "doc": "How much water can be supplied by source (m^3 / seg), intentionally unit (should be a big number). It is a tech value and is calculated by the last measurement of this value"
+    },
+    "created_at": {
+      "type": "datetime",
+      "required": true,
+      "doc": "Date of creation"
+    },
+    "updated_at": {
+      "type": "datetime",
+      "required": true,
+      "doc": "date of update"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "creator": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": "createdBy",
+      "doc": "who creates a source"
+    },
+    "updater": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": "updatedBy",
+      "doc": "who updates a source"
+    },
+    "category": {
+      "type": "belongsTo",
+      "model": "SourceCategory",
+      "foreignKey": "categoryId",
+      "doc": "big category, where is the water: surface, ground, etc"
+    },
+    "type": {
+      "type": "belongsTo",
+      "model": "SourceType",
+      "foreignKey": "typeId",
+      "doc": "type of water source: lake, river (streams), ground water, spring, facility"
+    },
+    "measurements": {
+      "type": "hasMany",
+      "model": "Measurement",
+      "foreignKey": "sourceId"
+    }
+  },
   "acls": [],
   "methods": []
 }

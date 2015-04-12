@@ -1,0 +1,33 @@
+{
+  "name": "Parameter",
+  "plural": "Parameters",
+  "description": "Measuring parameters",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "limit": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "type": {
+      "type": "belongsTo",
+      "model": "ParameterType",
+      "foreignKey": "typeId",
+      "doc": "Type of parameter: chemical, physical, organic"
+    },
+    "unit": {
+      "type": "belongsTo",
+      "model": "MeasureUnit",
+      "foreignKey": "measureUnitId",
+      "doc": "measure unit"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

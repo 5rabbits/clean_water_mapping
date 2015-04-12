@@ -1,0 +1,36 @@
+{
+  "name": "Measurement",
+  "plural": "Measurements",
+  "description": "A measurement carried out on a date by a technician",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true,
+      "doc": "a description of this measurement"
+    },
+    "date": {
+      "type": "date",
+      "required": true,
+      "doc": "date of issue"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "source": {
+      "type": "belongsTo",
+      "model": "Source",
+      "foreignKey": "sourceId",
+      "doc": "source that are evaluating"
+    },
+    "creator": {
+      "type": "belongsTo",
+      "model": "Person",
+      "foreignKey": "createdBy",
+      "doc": "who creates measurement"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
